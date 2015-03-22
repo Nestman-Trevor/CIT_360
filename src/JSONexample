@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+
+</head>
+
+<h1>Water Tracker History</h1>
+
+<h2 id ="name">Name: </h2>
+<p>
+This could be use to read in information using input streams.<br>
+It could also be used in an outpub stream
+</p>
+
+<p id="date"></p>
+<p id="amount"></p>
+
+<script>
+var user = '{"name":"Trevor","surname":"Nestman"}'
+user = JSON.parse(user);
+document.getElementById("name").innerHTML = 
+	"Name: " + user.name + " " + user.surname;
+
+var entryDate = '{"day":"4","month":"March", "year":"2015"}'
+var entryAmount = '{"amount":"15"}'
+
+entryDate = JSON.parse(entryDate);
+entryAmount = JSON.parse(entryAmount);
+
+
+document.getElementById("date").innerHTML =
+	"Date: " + entryDate.month + " " + entryDate.day + "th, " + entryDate.year;
+
+document.getElementById("amount").innerHTML =
+	"Amount: " + entryAmount.amount + "oz";
+</script>
+
+
+</body>
+</html>
